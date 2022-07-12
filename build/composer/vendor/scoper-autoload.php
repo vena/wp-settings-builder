@@ -6,8 +6,8 @@ $loader = require_once __DIR__.'/autoload.php';
 
 // Exposed classes. For more information see:
 // https://github.com/humbug/php-scoper/blob/master/docs/configuration.md#exposing-classes
-if (!class_exists('ComposerAutoloaderInit90fdc1e63b9b835860563278d87423ac', false) && !interface_exists('ComposerAutoloaderInit90fdc1e63b9b835860563278d87423ac', false) && !trait_exists('ComposerAutoloaderInit90fdc1e63b9b835860563278d87423ac', false)) {
-    spl_autoload_call('CumulusSettingsBuilder\Vendors\ComposerAutoloaderInit90fdc1e63b9b835860563278d87423ac');
+if (!class_exists('ComposerAutoloaderInit36eb2d7368710e6a68cb789fba56eda4', false) && !interface_exists('ComposerAutoloaderInit36eb2d7368710e6a68cb789fba56eda4', false) && !trait_exists('ComposerAutoloaderInit36eb2d7368710e6a68cb789fba56eda4', false)) {
+    spl_autoload_call('Vena\Vendors\ComposerAutoloaderInit36eb2d7368710e6a68cb789fba56eda4');
 }
 
 return $loader;

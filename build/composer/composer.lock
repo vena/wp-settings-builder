@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb2ccbed9fb1b0491ec313f47396ce8f",
+    "content-hash": "c45a3dc64f5af99c866c9cfa929c6211",
     "packages": [],
     "packages-dev": [
         {
             "name": "bamarni/composer-bin-plugin",
-            "version": "1.6.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bamarni/composer-bin-plugin.git",
-                "reference": "80b2f1ca19ff81e9aea495e7cf70443e70d12048"
+                "reference": "c1bbee3662a2a84c6aad84b7c6daefcae29e5690"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bamarni/composer-bin-plugin/zipball/80b2f1ca19ff81e9aea495e7cf70443e70d12048",
-                "reference": "80b2f1ca19ff81e9aea495e7cf70443e70d12048",
+                "url": "https://api.github.com/repos/bamarni/composer-bin-plugin/zipball/c1bbee3662a2a84c6aad84b7c6daefcae29e5690",
+                "reference": "c1bbee3662a2a84c6aad84b7c6daefcae29e5690",
                 "shasum": ""
             },
             "require": {
@@ -27,8 +27,14 @@
             },
             "require-dev": {
                 "composer/composer": "^2.0",
+                "ext-json": "*",
                 "phpstan/extension-installer": "^1.1",
-                "symfony/console": "^5.4.7 || ^6.0.7"
+                "phpstan/phpstan": "^1.8",
+                "phpstan/phpstan-phpunit": "^1.1",
+                "phpunit/phpunit": "^8.5 || ^9.5",
+                "symfony/console": "^5.4.7 || ^6.0.7",
+                "symfony/finder": "^5.4.7 || ^6.0.7",
+                "symfony/process": "^5.4.7 || ^6.0.7"
             },
             "type": "composer-plugin",
             "extra": {
@@ -54,9 +60,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bamarni/composer-bin-plugin/issues",
-                "source": "https://github.com/bamarni/composer-bin-plugin/tree/1.6.0"
+                "source": "https://github.com/bamarni/composer-bin-plugin/tree/1.7.0"
             },
-            "time": "2022-07-06T22:16:05+00:00"
+            "time": "2022-07-10T17:28:16+00:00"
         },
         {
             "name": "composer/pcre",
@@ -427,16 +433,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.8.0",
+            "version": "v3.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "cbad1115aac4b5c3c5540e7210d3c9fba2f81fa3"
+                "reference": "9b23c42f4d063f9e3aad823500e0940348b5ed63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/cbad1115aac4b5c3c5540e7210d3c9fba2f81fa3",
-                "reference": "cbad1115aac4b5c3c5540e7210d3c9fba2f81fa3",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/9b23c42f4d063f9e3aad823500e0940348b5ed63",
+                "reference": "9b23c42f4d063f9e3aad823500e0940348b5ed63",
                 "shasum": ""
             },
             "require": {
@@ -504,7 +510,7 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues",
-                "source": "https://github.com/FriendsOfPHP/PHP-CS-Fixer/tree/v3.8.0"
+                "source": "https://github.com/FriendsOfPHP/PHP-CS-Fixer/tree/v3.9.2"
             },
             "funding": [
                 {
@@ -512,7 +518,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-18T17:20:59+00:00"
+            "time": "2022-07-11T17:53:00+00:00"
         },
         {
             "name": "php-cs-fixer/diff",
@@ -2074,11 +2080,17 @@
         },
         {
             "name": "vena/php-cs-fixer-wordpress",
-            "version": "dev-main",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vena/php-cs-fixer-wordpress.git",
+                "reference": "92a611c97ff85077f0c6366f64fb6e65adfd81fa"
+            },
             "dist": {
-                "type": "path",
-                "url": "/Users/vena/Documents/Projects/php-cs-fixer-wordpress",
-                "reference": "08218e7b363d526d62cce8a4b050fb443ed24082"
+                "type": "zip",
+                "url": "https://api.github.com/repos/vena/php-cs-fixer-wordpress/zipball/92a611c97ff85077f0c6366f64fb6e65adfd81fa",
+                "reference": "92a611c97ff85077f0c6366f64fb6e65adfd81fa",
+                "shasum": ""
             },
             "require": {
                 "friendsofphp/php-cs-fixer": "^3.0.0",
@@ -2093,11 +2105,7 @@
                     "vena\\WordPress\\PhpCsFixer\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2108,19 +2116,21 @@
                 }
             ],
             "description": "A custom ruleset for PHP CS Fixer (close to) Wordpress Coding Standards",
-            "transport-options": {
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/vena/php-cs-fixer-wordpress/issues",
+                "source": "https://github.com/vena/php-cs-fixer-wordpress/tree/v1.0.1"
+            },
+            "time": "2022-07-12T02:49:06+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "vena/php-cs-fixer-wordpress": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=7.4.0"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
 }

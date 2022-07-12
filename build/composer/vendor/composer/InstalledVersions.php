@@ -9,10 +9,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace CumulusSettingsBuilder\Vendors\Composer;
+namespace Vena\Vendors\Composer;
 
-use CumulusSettingsBuilder\Vendors\Composer\Autoload\ClassLoader;
-use CumulusSettingsBuilder\Vendors\Composer\Semver\VersionParser;
+use Vena\Vendors\Composer\Autoload\ClassLoader;
+use Vena\Vendors\Composer\Semver\VersionParser;
 /**
  * This class is copied in every Composer installed project and available to all
  *
@@ -277,7 +277,7 @@ class InstalledVersions
     private static function getInstalled()
     {
         if (null === self::$canGetVendors) {
-            self::$canGetVendors = \method_exists('CumulusSettingsBuilder\\Vendors\\Composer\\Autoload\\ClassLoader', 'getRegisteredLoaders');
+            self::$canGetVendors = \method_exists('Vena\\Vendors\\Composer\\Autoload\\ClassLoader', 'getRegisteredLoaders');
         }
         $installed = array();
         if (self::$canGetVendors) {
