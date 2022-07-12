@@ -190,13 +190,18 @@ class Builder {
 		if ( $id === false || $id === null ) {
 			$id = "WSB/{$this->menu_slug}/{$id}";
 		}
+
+		if ( \array_key_exists( $id, $this->sections ) ) {
+			return $this->sections[ $id ];
+		}
+
 		$section = new Section(
 			$id,
 			$title,
 			$callback,
 			$this->menu_slug
 		);
-		$this->sections[] = $section;
+		$this->sections[ $id ] = $section;
 
 		return $section;
 	}
