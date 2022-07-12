@@ -162,6 +162,13 @@ $section2->addField( array(
 ) );
 
 $section2->addField( array(
+	'type' => 'html',
+	'args' => array(
+		'content' => '<h3>This is another test.</h3>',
+	),
+) );
+
+$section2->addField( array(
 	'type'        => 'color',
 	'id'          => 'my/section2/color',
 	'title'       => 'A color field',

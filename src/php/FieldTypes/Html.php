@@ -12,6 +12,10 @@ class Html {
 		$args             = empty( $options['args'] ) ? array() : $options['args'];
 		$options['args']  = \array_merge( array( 'label_for' => null ), $args );
 
+		if ( ! isset( $options['id'] ) ) {
+			$options['id'] = \uniqid();
+		}
+
 		$this->traitConstructor( $options );
 	}
 
