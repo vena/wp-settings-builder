@@ -4,66 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c45a3dc64f5af99c866c9cfa929c6211",
+    "content-hash": "e6b20eaa22442cb1b4e43fd868b9c271",
     "packages": [],
     "packages-dev": [
-        {
-            "name": "bamarni/composer-bin-plugin",
-            "version": "1.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bamarni/composer-bin-plugin.git",
-                "reference": "c1bbee3662a2a84c6aad84b7c6daefcae29e5690"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bamarni/composer-bin-plugin/zipball/c1bbee3662a2a84c6aad84b7c6daefcae29e5690",
-                "reference": "c1bbee3662a2a84c6aad84b7c6daefcae29e5690",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^2.0",
-                "php": "^7.2.5 || ^8.0"
-            },
-            "require-dev": {
-                "composer/composer": "^2.0",
-                "ext-json": "*",
-                "phpstan/extension-installer": "^1.1",
-                "phpstan/phpstan": "^1.8",
-                "phpstan/phpstan-phpunit": "^1.1",
-                "phpunit/phpunit": "^8.5 || ^9.5",
-                "symfony/console": "^5.4.7 || ^6.0.7",
-                "symfony/finder": "^5.4.7 || ^6.0.7",
-                "symfony/process": "^5.4.7 || ^6.0.7"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Bamarni\\Composer\\Bin\\Plugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "Bamarni\\Composer\\Bin\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "No conflicts for your bin dependencies",
-            "keywords": [
-                "composer",
-                "conflict",
-                "dependency",
-                "executable",
-                "isolation",
-                "tool"
-            ],
-            "support": {
-                "issues": "https://github.com/bamarni/composer-bin-plugin/issues",
-                "source": "https://github.com/bamarni/composer-bin-plugin/tree/1.7.0"
-            },
-            "time": "2022-07-10T17:28:16+00:00"
-        },
         {
             "name": "composer/pcre",
             "version": "3.0.0",

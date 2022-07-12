@@ -5,14 +5,14 @@ namespace vena\WordpressSettingsBuilder;
 /*
  * Plugin Name: Settings Page Test
  * Description: This allows testing the Settings Builder class as a plugin.
- * Version: 1.0.4
+ * Version: 1.0.5
  * Author: vena
  *
  * @author vena
  * @version 2.0.4
  */
 
-require __DIR__ . '/build/composer/vendor/scoper-autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 $settings = new Builder( 'Test Settings Title', 'Testing Menu', 'manage_options', 'my-settings', 9999 );
 $section  = $settings->addSection( 'My/Section', 'My Section' );
