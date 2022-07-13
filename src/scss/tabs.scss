@@ -1,7 +1,8 @@
 .wp-settings-builder.use-tabs {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 auto 1em;
+	margin: 0 0 1em;
+	max-width: 900px;
 }
 input.wp-settings-tab {
 	position: absolute;
@@ -45,35 +46,49 @@ input.wp-settings-tab {
 
 	&:hover,
 	&:active {
-		background: var(--wpsb-admin_colors-active);
-		color: var(--wpsb-admin_icon_colors-current);
+		background: var(--wpsb-admin_icon_colors-current);
+		color: var(--wpsb-admin_colors-active);
 	}
 
 	input.wp-settings-tab:focus-within + &,
 	input.wp-settings-tab:active + & {
-		background: var(--wpsb-admin_colors-active);
-		color: var(--wpsb-admin_icon_colors-current);
+		background: var(--wpsb-admin_icon_colors-current);
+		color: var(--wpsb-admin_colors-active);
 		outline: 1px solid var(--wpsb-admin_colors-highlight);
 	}
 
 	input.wp-settings-tab:checked + & {
-		background: #fff;
-		color: var(--wpsb-admin_colors-base);
+		background: var(--wpsb-admin_colors-active);
+		color: var(--wpsb-admin_icon_colors-current);
 		border-right: 3px solid rgba(0, 0, 0, 0.15);
 	}
 }
 .wp-settings-panel {
 	display: none;
-	padding: 1em 1.25em;
+	padding: 1rem 1.25rem;
 	background: #fff;
 	width: 100%;
-	border: 3px solid rgba(0, 0, 0, 0.15);
-	border-left: none;
-	border-top: none;
-	border-radius: 2px;
+	overflow: hidden;
 
-	h2:first-child {
-		margin: 0 0 0.75em;
+	@media (min-width: 800px) {
+		border-radius: 3px;
+		border-width: 3px;
+		border-style: solid;
+		border-color: rgba(0, 0, 0, 0.15);
+		border-left: none;
+		border-top: none;
+	}
+
+	.wp-settings-section_title {
+		margin: -1rem -1.25rem 1em;
+		background: var(--wpsb-admin_colors-active);
+		color: var(--wpsb-admin_icon_colors-current);
+		border-bottom: 1px solid var(--wpsb-admin_colors-highlight);
+		padding: 0.75rem 1.25rem;
+
+		@media (min-width: 800px) {
+			border-radius: 3px 3px 0 0;
+		}
 	}
 }
 input.wp-settings-tab:checked + .wp-settings-tablabel + .wp-settings-panel {

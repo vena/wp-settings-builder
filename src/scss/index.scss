@@ -19,6 +19,11 @@
 		margin-block-start: 0;
 		margin-block-end: 0.75em;
 	}
+
+	.wp-settings-section_title {
+		font-size: 1.5em;
+		margin: 0.5em 0 0.75em;
+	}
 }
 
 @import "./tabs.scss";

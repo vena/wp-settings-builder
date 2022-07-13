@@ -157,9 +157,9 @@ class Builder {
 		\settings_errors( 'WSB/' . $this->menu_slug . '/message' );
 
 		$styleVars = array(
-			'--wpsb-admin_colors-base'          => $theme['colors'][0],
-			'--wpsb-admin_colors-active'        => $theme['colors'][ \count( $theme['colors'] ) - 2 ],
-			'--wpsb-admin_colors-highlight: %s' => $theme['colors'][ \count( $theme['colors'] ) - 1 ],
+			'--wpsb-admin_colors-base'      => $theme['colors'][0],
+			'--wpsb-admin_colors-active'    => $theme['colors'][ \count( $theme['colors'] ) - 2 ],
+			'--wpsb-admin_colors-highlight' => $theme['colors'][ \count( $theme['colors'] ) - 1 ],
 		);
 
 		foreach ( $theme['icon_colors'] as $ik => $ic ) {
@@ -252,7 +252,7 @@ class Builder {
 			}
 
 			if ( $section['title'] ) {
-				\printf( '<h2>%s</h2>', \wp_kses_post( $section['title'] ) );
+				\printf( '<h2 class="wp-settings-section_title">%s</h2>', \wp_kses_post( $section['title'] ) );
 			}
 
 			if ( $section['callback'] ) {
