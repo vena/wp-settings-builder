@@ -25,7 +25,7 @@
 	}
 
 	.wp-settings-field-content {
-		max-width: 100%;
+		width: 100%;
 	}
 
 	input,
@@ -37,8 +37,14 @@
 			border-color: red;
 		}
 	}
-	input {
-		width: 500px;
+
+	input[type="email"],
+	input[type="password"],
+	input[type="search"],
+	input[type="text"],
+	input[type="tel"],
+	input[type="url"] {
+		width: 100%;
 	}
 
 	&:not(.orientation-column) input[type="color"],
@@ -48,7 +54,7 @@
 	&:not(.orientation-column) input[type="datetime-local"],
 	&:not(.orientation-column) input[type="month"],
 	&:not(.orientation-column) input[type="week"] {
-		min-width: auto;
+		width: auto;
 	}
 
 	&.wpsb-type-checkbox,
