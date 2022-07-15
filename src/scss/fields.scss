@@ -58,7 +58,7 @@
 	&:not(.orientation-column) input[type="datetime-local"],
 	&:not(.orientation-column) input[type="month"],
 	&:not(.orientation-column) input[type="week"] {
-		width: auto;
+		width: revert;
 	}
 
 	&.wpsb-type-checkbox,
