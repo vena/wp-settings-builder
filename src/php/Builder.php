@@ -90,13 +90,13 @@ class Builder {
 
 				$assets = include \plugin_dir_path( \realpath( BUILDDIR . '/index.asset.php' ) ) . 'index.asset.php';
 				\wp_enqueue_style(
-					'wp-settings-builder-style',
+					'wp-settings-builder-style-' . $menu_slug,
 					\plugin_dir_url( \realpath( BUILDDIR . '/index.css' ) ) . 'index.css',
 					array(),
 					$assets['version']
 				);
 				\wp_enqueue_script(
-					'wp-settings-builder-script',
+					'wp-settings-builder-script' . $menu_slug,
 					\plugin_dir_url( \realpath( BUILDDIR . '/index.js' ) ) . 'index.js',
 					$assets['dependencies'],
 					$assets['version'],
