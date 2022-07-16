@@ -76,33 +76,32 @@ class Builder {
 		$this->position   = $position;
 
 		\add_action( 'admin_menu', array( $this, 'initPage' ) );
-		\add_action(
-			'current_screen',
-			function () {
-				if ( ! \is_admin() ) {
-					return;
-				}
-				$screen = \get_current_screen();
+		\add_action( 'current_screen', array( $this, 'enqueueAssets' ) );
+	}
 
-				if ( ! isset( $screen->id ) || 'settings_page_' . $this->menu_slug !== $screen->id ) {
-					return;
-				}
+	public function enqueueAssets() {
+		if ( ! \is_admin() ) {
+			return;
+		}
+		$screen = \get_current_screen();
 
-				$assets = include \plugin_dir_path( \realpath( BUILDDIR . '/index.asset.php' ) ) . 'index.asset.php';
-				\wp_enqueue_style(
-					'wp-settings-builder-style-' . $menu_slug,
-					\plugin_dir_url( \realpath( BUILDDIR . '/index.css' ) ) . 'index.css',
-					array(),
-					$assets['version']
-				);
-				\wp_enqueue_script(
-					'wp-settings-builder-script' . $menu_slug,
-					\plugin_dir_url( \realpath( BUILDDIR . '/index.js' ) ) . 'index.js',
-					$assets['dependencies'],
-					$assets['version'],
-					true
-				);
-			}
+		if ( ! isset( $screen->id ) || 'settings_page_' . $this->menu_slug !== $screen->id ) {
+			return;
+		}
+
+		$assets = include \plugin_dir_path( \realpath( BUILDDIR . '/index.asset.php' ) ) . 'index.asset.php';
+		\wp_enqueue_style(
+			'wp-settings-builder-style-' . $this->menu_slug,
+			\plugin_dir_url( \realpath( BUILDDIR . '/index.css' ) ) . 'index.css',
+			array(),
+			$assets['version']
+		);
+		\wp_enqueue_script(
+			'wp-settings-builder-script' . $this->menu_slug,
+			\plugin_dir_url( \realpath( BUILDDIR . '/index.js' ) ) . 'index.js',
+			$assets['dependencies'],
+			$assets['version'],
+			true
 		);
 	}
 
