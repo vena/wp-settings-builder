@@ -5,7 +5,7 @@ namespace vena\WordpressSettingsBuilder;
 /*
  * Plugin Name: Settings Page Test
  * Description: This allows testing the Settings Builder class as a plugin.
- * Version: 1.0.6
+ * Version: 1.0.7
  * Author: vena
  *
  * @author vena
