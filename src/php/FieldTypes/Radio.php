@@ -48,6 +48,16 @@ class Radio {
 			<?php
 			++$index;
 		}
+
+		if ( isset( $args['help'] ) ): ?>
+			<div class="description help">
+				<?php if ( \is_callable( $args['help'] ) ): ?>
+					<?php \call_user_func( $args['help'] ); ?>
+				<?php else: ?>
+					<?php echo $args['help']; ?>
+				<?php endif; ?>
+			</div>
+		<?php endif;
 	}
 
 	/**

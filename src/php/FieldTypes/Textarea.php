@@ -30,9 +30,13 @@ class Textarea {
 			<?php $this->outputFieldAttributes( $args ); ?>
 		><?php echo \esc_textarea( $value ); ?></textarea>
 		<?php if ( isset( $args['help'] ) ): ?>
-			<small class="description help">
-				<?php echo $args['help']; ?>
-			</small>
+			<div class="description help">
+				<?php if ( \is_callable( $args['help'] ) ): ?>
+					<?php \call_user_func( $args['help'] ); ?>
+				<?php else: ?>
+					<?php echo $args['help']; ?>
+				<?php endif; ?>
+			</div>
 		<?php endif;
 	}
 }

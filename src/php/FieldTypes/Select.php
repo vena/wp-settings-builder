@@ -31,9 +31,13 @@ class Select {
 			<?php endforeach; ?>
 		</select>
 		<?php if ( isset( $args['help'] ) ): ?>
-			<p class="description help">
-				<?php echo $args['help']; ?>
-			</p>
+			<div class="description help">
+				<?php if ( \is_callable( $args['help'] ) ): ?>
+					<?php \call_user_func( $args['help'] ); ?>
+				<?php else: ?>
+					<?php echo $args['help']; ?>
+				<?php endif; ?>
+			</div>
 		<?php endif;
 	}
 

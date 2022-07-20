@@ -205,13 +205,13 @@ trait Generic {
 			<?php $this->outputFieldAttributes( $args ); ?>
 		/>
 		<?php if ( isset( $args['help'] ) ): ?>
-			<p class="description help">
+			<div class="description help">
 				<?php if ( \is_callable( $args['help'] ) ): ?>
 					<?php \call_user_func( $args['help'] ); ?>
 				<?php else: ?>
 					<?php echo $args['help']; ?>
 				<?php endif; ?>
-			</p>
+			</div>
 		<?php endif;
 	}
 
