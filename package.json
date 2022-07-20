@@ -14,7 +14,7 @@
     "lint:md:js": "wp-scripts lint-md-js",
     "lint:pkg-json": "wp-scripts lint-pkg-json",
     "packages-update": "wp-scripts packages-update",
-    "full-upgrade": "npm update; npm run packages-update; npm upgrade"
+    "full-upgrade": "npm update; npm run packages-update; npm upgrade; phpcs-tokens/refresh.sh;"
   },
   "repository": {
     "type": "git",
