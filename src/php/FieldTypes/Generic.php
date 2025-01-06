@@ -10,6 +10,8 @@ trait Generic {
 
 	private $title = 'Field';
 
+	private $name;
+
 	private $callback;
 
 	private $orientation;
