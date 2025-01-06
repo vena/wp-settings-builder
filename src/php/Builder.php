@@ -181,6 +181,15 @@ class Builder {
 		<?php
 	}
 
+	/**
+	 * Add a new section.
+	 *
+	 * @param string $id    Section ID
+	 * @param string $title Section title
+	 * @param function $callback Render callback (optional)
+	 *
+	 * @return Section
+	 */
 	public function addSection(
 		$id = false,
 		$title = 'Section',
