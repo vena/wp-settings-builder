@@ -55,7 +55,7 @@ class Checkbox {
 								<?php if ( \in_array( $option['value'], $value ) ): ?>
 									checked
 								<?php endif; ?>
-							<?php else if ( $value === $option['value'] ): ?>
+							<?php elseif ( $value === $option['value'] ): ?>
 								checked
 							<?php endif; ?>
 							<?php $this->outputFieldAttributes( $args ); ?>
