@@ -51,7 +51,7 @@ class Checkbox {
 							id="<?php echo $label_for ?>"
 							name="<?php echo \esc_attr( $this->option_name ); ?>"
 							value="<?php echo \esc_attr( $option['value'] ); ?>"
-							<?php if ( \substr( $this->option_name, -2 ) === '[]' ): ?>
+							<?php if ( \substr( $this->option_name, -2 ) === '[]' && is_array($value) ): ?>
 								<?php if ( \in_array( $option['value'], $value ) ): ?>
 									checked
 								<?php endif; ?>
