@@ -1,3 +1,4 @@
+@use "sass:meta";
 .wp-settings-builder {
 	display: block;
 	width: 100%;
@@ -27,5 +28,5 @@
 	}
 }
 
-@import "./tabs.scss";
-@import "./fields.scss";
+@include meta.load-css("tabs.scss");
+@include meta.load-css("fields.scss");

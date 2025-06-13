@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/vena/wp-settings-builder#readme",
   "devDependencies": {
-    "@wordpress/scripts": "^30.8.1",
+    "@wordpress/scripts": "^30.18.0",
     "prettier": "npm:wp-prettier@^3.0.3"
   },
   "browserslist": [

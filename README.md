@@ -43,9 +43,7 @@ $section->addField( [
 ] );
 ```
 
-Will store the set values as a serialized array under a single option with the base name, "option_array". The values in the
-brackets (e.g. "checkbox1", "checkbox2") are the keys to that array. When the fields are displayed on the settings page,
-each field will display only the value of its keyed data within the array.
+Will store the set values as a serialized array under a single option with the base name, "option_array". The values in the brackets (e.g. "checkbox1", "checkbox2") are the keys to that array. When the fields are displayed on the settings page, each field will display only the value of its keyed data within the array.
 
 When accessing the option directly using `get_option()`, note that you must use the base name to retrieve
 the full array value, and handle key access yourself.
